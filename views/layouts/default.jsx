@@ -17,7 +17,7 @@ function Default(html) {
           integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
           crossOrigin="anonymous"
         />
-        //-- normalize & skeleton links --//
+
         <link rel="stylesheet" href="/main.css" />
       </head>
       <body>

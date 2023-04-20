@@ -19,7 +19,10 @@ app.use("/breads", breadsController);
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
+
 app.use(express.static("public"));
+
+app.use(express.urlencoded({ extended: true }));
 
 // 404 Page
 app.get("*", (req, res) => {
