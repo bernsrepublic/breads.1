@@ -13,7 +13,13 @@ breads.get("/", (req, res) => {
 breads.get("/new", (req, res) => {
   res.render("new");
 });
-
+// EDIT
+breads.get("/:indexArray/edit", (req, res) => {
+  res.render("edit", {
+    bread: Bread[req.params.indexArray],
+    index: req.params.indexArray,
+  });
+});
 // SHOW
 breads.get("/:arrayIndex", (req, res) => {
   if (Bread[req.params.arrayIndex]) {
@@ -55,14 +61,6 @@ breads.put("/:arrayIndex", (req, res) => {
   }
   Bread[req.params.arrayIndex] = req.body;
   res.redirect(`/breads/${req.params.arrayIndex}`);
-});
-
-// EDIT
-breads.get("/:indexArray/edit", (req, res) => {
-  res.render("edit", {
-    bread: Bread[req.params.indexArray],
-    index: req.params.indexArray,
-  });
 });
 
 module.exports = breads; //exports should always be the last line.

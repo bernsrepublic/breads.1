@@ -1,3 +1,6 @@
+const React = require("react");
+const Default = require("./layouts/Default");
+
 function Edit({ bread, index }) {
   return (
     <Default>
@@ -26,3 +29,5 @@ function Edit({ bread, index }) {
     </Default>
   );
 }
+
+module.exports = Edit;
