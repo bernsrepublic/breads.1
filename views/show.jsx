@@ -13,13 +13,24 @@ function Show({ bread, index }) {
         have gluten.
       </p>
       <img src={bread.image} alt={bread.name} />
+      <img src={bread.image} alt={bread.name} />
+      <p>Baked by {bread.baker}</p>
+      <a href={`/breads/${bread.id}/edit`}>
+        <button>Edit</button>
+      </a>
+
       <li>
-        <a href="/breads">Go home</a>
+        <a href="/breads"></a>
+        <button>Go Home</button>
       </li>
-      <form action={`/breads/${index}?_method=DELETE`} method="POST">
+      <li>
+        <a href={`/breads/${bread.id}/edit`}>
+          <button>Edit</button>
+        </a>
+      </li>
+      <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
         <input type="submit" value="DELETE" />
       </form>
-      ;
     </Default>
   );
 }
