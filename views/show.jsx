@@ -18,15 +18,14 @@ function Show({ bread, index }) {
         <button>Edit</button>
       </a>
 
-      <li>
-        <a href="/breads"></a>
-        <button>Go Home</button>
-      </li>
-      <li>
+      <a href="/breads"></a>
+      <br></br>
+      <button>Go To Home</button>
+      {/* <li>
         <a href={`/breads/${bread.id}/edit`}>
           <button>Edit</button>
         </a>
-      </li>
+      </li> */}
       <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
         <input type="submit" value="DELETE" />
       </form>
