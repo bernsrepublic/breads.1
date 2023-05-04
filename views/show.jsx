@@ -13,19 +13,12 @@ function Show({ bread, index }) {
         have gluten.
       </p>
       <img src={bread.image} alt={bread.name} />
-      <p>{bread.getBakedBy()}</p>
-      <a href={`/breads/${bread.id}/edit`}>
-        <button>Edit</button>
-      </a>
-
-      <a href="/breads"></a>
-      <br></br>
-      <button>Go To Home</button>
-      {/* <li>
+      <p>{bread.getBakedby()}</p>
+      <li>
         <a href={`/breads/${bread.id}/edit`}>
           <button>Edit</button>
         </a>
-      </li> */}
+      </li>
       <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
         <input type="submit" value="DELETE" />
       </form>
@@ -33,4 +26,5 @@ function Show({ bread, index }) {
   );
 }
 
+module.exports = Show;
 module.exports = Show;
